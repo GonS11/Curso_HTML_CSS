@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed';
+}
+
+body {
+    background: hsl(0, 0%, 81%);
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 80%;
+    height: 50%;
+    margin: 10% auto;
+    max-width: 1444px;
+}
+
+.inside {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 30px;
+    color: hsl(0, 0%, 100%);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inside img {
+    width: 2.5rem;
+    border: 3px solid;
+    border-radius: 50%;
+}
+
+.name,
+.job {
+    position: relative;
+    left: 50px;
+    top: -60px;
+}
+
+.name {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.job {
+    margin-top: 0;
+}
+
+.resume {
+    font-weight: 600;
+    font-size: x-large;
+    margin-top: -50px;
+}
+
+.review1 {
+    grid-area: 1 / 1 / 2 / 3;
+    background: hsl(263, 55%, 52%);
+}
+
+.review1 img {
+    border-color: hsl(263, 96%, 69%);
+}
+
+.review2 {
+    grid-area: 1 / 3 / 2 / 4;
+    background: hsl(217, 19%, 35%);
+}
+
+.review2 img {
+    border-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.review3 {
+    grid-area: 2 / 1 / 2 / 2;
+    background: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+.review3 img {
+    border-color: hsl(0, 0%, 100%);
+}
+
+.review3 .job,
+.review3 .review-text {
+    color: hsl(216, 21%, 52%);
+}
+
+.review4 {
+    grid-area: 2 / 2 / 2 / 4;
+    background: hsl(219, 29%, 14%);
+}
+
+.review4 img {
+    border-color: hsl(263, 55%, 52%);
+}
+
+.review5 {
+    grid-area: 1 / 4 / 3 / 5;
+    background: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+.review5 img {
+    border-color: hsl(0, 0%, 100%);
+}
+
+.review5 .job,
+.review5 .review-text {
+    color: hsl(216, 21%, 52%);
+}
+
+.job,
+.review-text {
+    color: hsl(0, 2%, 81%);
+}
+
+
+/* Responsive Design for Mobile (375px and below) */
+@media (max-width: 375px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 90%;
+        height: auto;
+        margin: 5% auto;
+    }
+
+    .review1,
+    .review2,
+    .review3,
+    .review4,
+    .review5 {
+        grid-area: auto;
+    }
+}
